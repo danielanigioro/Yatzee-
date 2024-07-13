@@ -1,9 +1,3 @@
-""" a7.py
-Anigioro Daniel(doa8) Michel Adelien(mha57)
-NONE
-5/2/2024
-# Skeleton by Prof. Bracy, AWB93, April, 2023 """
-
 import dice
 
 class Rules():
@@ -27,29 +21,18 @@ class Rules():
     YAHTZEE = 12
     NUM_CATEGORIES = 13
 
-    """
-    Remember it is bad form to have `magic numbers` in your code.  Instead,
-    you can create a variable whose name offers a meaningful description of
-    what that number is. Here are some constants below that we want you to use.
-    """
+  
     FULL_HOUSE_PTS = 25
     SM_STRAIGHT_PTS = 30
     LG_STRAIGHT_PTS = 40
     YAHTZEE_PTS = 50
 
-    # STUDENTS: if you want to make your own constants/variables, create
-    # your new class attributes here:
 
-    # STUDENTS: Notice that
-    # CHANCE has the value 0 above, and CHANCE goes in location [0]
     names = ["Chance", "Ones", "Twos", "Threes", "Fours", "Fives", "Sixes",\
              "3 of a kind", "4 of a kind", "Full House", "Small Straight",\
              "Large Straight", "Yahtzee (5x!)"]
 
-    # STUDENTS: Notice that
-    # CHANCE has the value 0 above,   and CHANCE  goes in location [0]
-    # ...
-    # YAHTZEE has the value 12 above, and YAHTZEE goes in location [12]
+
     descriptions = [" -- sum all 5 dice ",
                     "   -- sum 1s only    ",
                     "   -- sum 2s only    ",
@@ -64,7 +47,7 @@ class Rules():
                     " -- "+str(LG_STRAIGHT_PTS)+" pts",
                     "  -- "+str(YAHTZEE_PTS)+" pts"]
 
-# STUDENTS: do not modify Basic!
+
 class Basic():
     """Basic is the simplest way to score a hand in Yahtzee.
     Any 5-dice hand meets the criteria to count for Basic.
@@ -99,7 +82,7 @@ class Basic():
             2. Set the `points` attribute to the appropriate number of points,
                 given the hand and category
 
-        Returns None (Students: don't return score. set the points attribute)
+        Returns None 
 
         When Basic is scored, simply sum the value of all dice in the hand.
         Also mark the category as filled. Each category can only be used once.
@@ -120,7 +103,7 @@ class Basic():
         return str(self.index) + ": "+ Rules.names[self.index]+\
             Rules.descriptions[self.index] + scoretext
 
-# STUDENTS: if you create any new classes, add them here.
+
 class Tok_fok_fh_Yahtzees(Basic):
     def __init__(self,index):
         super().__init__(index)
@@ -238,7 +221,6 @@ class Scorecard():
         self.categories[Rules.FIVES] = Upper_section(Rules.FIVES)
         self.categories[Rules.SIXES] = Upper_section(Rules.SIXES)
 
-    # --------- STUDENTS: Do not modify any of the code below ---------
 
     def cat_prompt(self):
         print(self)
