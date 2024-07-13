@@ -1,10 +1,3 @@
-# dice.py
-# by Prof. Bracy, AWB93, April, 2023
-
-""" A module that supports rolling and displaying lone dice."""
-
-# STUDENTS: do NOT modify this file. you will not submit it for A7
-
 import random
 
 random.seed(11)
